@@ -1,0 +1,19 @@
+{
+  "name": "start-servers-lambda",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "AWS Lambda to start EC2 servers (can be triggered by EventBridge or timer)",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./run-local.mjs start",
+    "stop": "node ./run-local.mjs stop"
+  },
+  "author": "Floyd Elliot",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-ec2": "^3.958.0",
+    "aws-sdk": "^2.1693.0",
+    "uuid": "^13.0.0"
+  }
+}
