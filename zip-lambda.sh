@@ -1,1 +1,1 @@
-zip -r start-servers-lambda.zip . -x "*node_modules*" "*.zip" "run-local.mjs" "*.vscode*" "*.sh"
+zip -r start-servers-lambda.zip . -x "*node_modules*" "*.zip" "run-local.mjs" "*.vscode*" "*.sh" "*.git*" "README.md"

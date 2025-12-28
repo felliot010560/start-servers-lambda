@@ -5,11 +5,10 @@ import { holidays } from "./holidays.js";
 export const handler = async(event) => {
     //Is today an exchange holiday? Check against holidays array.
     const today = new Date().toLocaleDateString("sv");
-    for( let i = 0; i < holidays.length; i++ ) {
-        if( holidays[i] === today ) {
-            console.log("Today is a holiday--not starting or stopping servers.");
-            return;
-        }
+    const found = holidays.find( (val) => val === today );
+    if( found ) {
+        console.log("Today is a holiday--not starting or stopping servers.");
+        return;
     }
 
     const instances = process.env.INSTANCES.split(" ");
