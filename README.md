@@ -1,4 +1,4 @@
-This is a lambda function handler that will be called at the start and end of each trading day to start the EC2 servers you use in your trading system. You will need to create the AWS Lambda Function (in the Console or using the CLI) and upload a zip file (you can run zip-lambda.sh to do this). You will also need to give the role you use to run the lambda two permissions: StartInstances and StopInstances.
+This is a lambda function handler that will be called at the start and end of each trading day to start the EC2 servers you use in your trading system. You will need to create the AWS Lambda Function (in the Console or using the CLI) and upload a zip file (you can run zip-lambda.sh to do this). You will also need to give the role you use to run the lambda two permissions: ec2::StartInstances and ec2::StopInstances.
 
 When configuring the lambda, be sure to define the REGION environment var (which is, shockingly, the AWS region your instances are in) and the INSTANCE env var, which is a space-delimited list of instance ids in that region, e.g.: "i-0123456789ABCDEF0 i-0FEDCBA9876543210 < <i>another-instance-id</i> > < <i>yet-another-instance-id</i> >".
 
